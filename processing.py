@@ -11,6 +11,6 @@ def image_normalisation(image):
   return image
 
 def image_display(image):
-  image = image + np.array(IMAGENET_MEAN_RGB_VALUES).reshape((1,1,1,3))
+  image = image + np.array(settings.IMAGENET_MEAN_RGB_VALUES).reshape((1,1,1,3))
   image = np.clip(image[0],0,255).astype('uint8')
   plt.imshow(image)
